@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: terryrpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: terryrpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: terryrpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: terryrpipelinesjavascriptdocker 
+          image: trcontainerregistry1.azurecr.io/terryrpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
